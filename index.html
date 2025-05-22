@@ -201,7 +201,7 @@
     © 2025 All Rights Reserved — <strong> QAZI </strong>
   </div>
 
- <script>
+<script>
     function startBombing(event) {
       event.preventDefault();
       const form = document.getElementById('bombingForm');
@@ -221,7 +221,19 @@
       form.submit();
     }
 
-
+          document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('spinnerOverlay').style.display = 'none';
+        document.getElementById('bombButton').disabled = false;
+        Swal.fire({
+                title: 'Bombing Successful! 🎉🔥',
+                html: '<div style="color: #00fff7; text-shadow: 0 0 10px #00ffee;">Successfully sent <b>100 OTPs</b> to <b></b>! 🚀<br><i>Powered by QAZI </i></div>',
+                icon: 'success',
+                confirmButtonColor: '#00fff7',
+                showConfirmButton: true,
+                timer: 5000,
+                backdrop: 'rgba(0, 0, 0, 0.8)',
+                customClass: { popup: 'animated bounceIn' }
+            });      });
       </script>
 </body>
 </html>
